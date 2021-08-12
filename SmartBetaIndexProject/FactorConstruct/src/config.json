@@ -1,0 +1,34 @@
+{
+    "db": {
+        "work_dir": "C:/Users/ChrisRen/Desktop/rivermap/FactorConstruct", 
+        "user": "postgres",
+        "password":"bb980404"
+    },
+
+    "index_list": [
+        "univ_hsci",
+        "univ_hslmi",
+        "univ_hslmic", 
+        "univ_hsi"
+    ],
+
+    "fac_list": [
+        "ACCRUAL", 
+        "B2P_ANN", 
+        "DEBT_EQUITY", 
+        "DY_ANN", 
+        "EBITDA_EV", 
+        "EPS_VAR", 
+        "EY_FWD_ANN", 
+        "HIGHP1Y", 
+        "ROE_ANN", 
+        "VOL1Y"
+    ],
+
+    "startdate": "2007-09-30",
+    "enddate": "2020-05-31",
+    "freq": "M",
+    "grace": 720
+}
+
+

@@ -1,0 +1,66 @@
+{    "parameters": {
+        "single_or_multiple_narrowing": "single", 
+        "single_factor_name": "V",
+        "minimum_weight": 0,
+        "target_function_case_number": 3,
+        "min_active_cap": -0.03,
+        "max_active_cap":  0.03,
+
+        "factor_direction_dict": {
+            "VOL1Y":       -1,
+            "MOM_12M":      1,
+            "ROE_ANN":      1,
+            "EPS_VAR":     -1,
+            "DEBT_EQUITY": -1,
+            "OCF_DEBT":     1,
+            "SPS_VAR":     -1,
+            "ASSET_TURN":   1,
+            "EY_FWD_ANN":   1,
+            "ACCRUAL":     -1,
+            "B2P_ANN":      1,
+            "EBITDA_EV":    1
+        },
+
+        "yield_factor_list": [],
+
+        "factor_map_dict": {
+            "V": ["VOL1Y"]
+        }, 
+
+        "factor_industry_ignore_dict": {
+            "VOL1Y": ["Energy"]
+        }  
+    },
+    
+     "parameters_review": {
+        "screening_factor_list": ["EPS_VAR","DEBT_EQUITY"],            
+        "screening_delete_percent": 0.2,
+        "screening_weights": [0.5, 0.5],
+        "screening_buffer_percent": 0.025
+    },
+
+    "parameters_capping": { },
+
+    "hyper_parameters": {
+        "db": {
+            "work_directory":"C:/Users/ChrisRen/Desktop/rivermap/FactorConstruct",
+            "user": "postgres",
+            "password": "bb980404"
+        },
+        "raw_data_needed": ["FS_EPS_RPT_DATE","FS_FISCAL_DATE","FS_PAYOUT"],
+        "parameter_set_name": "ParameterSet1",
+        "production_on_review_input_file" : "inputs/inputs_for_review.csv",
+        "production_on_capping_input_file": "inputs/inputs_for_capping.csv",
+        "production_on_review_output_file": "outputs/outputs_for_review.csv",
+        "production_on_capping_output_file":"outputs/outputs_for_capping.csv",
+        "review_date": "2012-07-15",
+        "capping_date": "2012-09-05",
+        "impl_date":  "2012-09-05",
+        "broad_or_narrow_index": "broad index",
+        "universe_name" : "univ_hslmic", 
+        "index_name" : "myindex001"
+    } 
+}
+
+
+
